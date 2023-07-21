@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div>
+        <div id="dimensions">
+        
+            <label for="width">Largura</label>
+            <input type="number" name="width" id="width" min="1" max="20"  placeholder="0 a 20">
+
+            <label for="height">Altura</label>
+            <input type="number" name="height" id="height" min="1" max="10" placeholder="0 a 10">
+
+           <input type="button" value="Aplicar" id="enter" onclick="setOwnership();setLegalReserve()">
+           <input type="button" value="Resetar" id="reset" onclick="resetOwnership()">
+        </div>
+
+    </div>
+    <div id="map">
+        <div class="line">
+            <div class="square" id="0" ></div>
+        </div>
+    </div>
+    <script src="map/map.js"></script>
+    <script src="map/mapBehavior.js"></script>
+    <script src="map/resources.js"></script>
+</body>
+</html>
