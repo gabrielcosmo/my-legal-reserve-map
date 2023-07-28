@@ -39,3 +39,7 @@ function allDivisors(n){
     return divisors
 }
 
+var generalConcersor = {
+    "m2ToKM2": (value)=> value*(10**-6), //valor em metros * fator de conversão
+    "m2ToHa": (value)=>  value*(10**-4) //...
+}

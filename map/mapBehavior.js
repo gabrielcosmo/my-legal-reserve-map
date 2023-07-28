@@ -11,6 +11,7 @@ function setOwnership(){
     for (let index = 0; index < ownerShip.length; index++) {
        ownerShip[index].style.backgroundColor='var(--ownershipHighlightColor)'
     }
+    setStats(widthNum*heightNum)
 }
 
 
@@ -19,7 +20,7 @@ function resetOwnership(){
     var heightNum = Number(heightInput.value)
 
     var ownerShip = squareStream(widthNum, heightNum)
-
+    
     for (let index = 0; index < ownerShip.length; index++) {
         ownerShip[index].style.backgroundColor='green'
      }
@@ -58,3 +59,20 @@ function squareStream(w, h){
     }
     return area
 }
+
+function setStats(areaTot){
+    var ownershipRow = document.getElementById("ownershipStats")
+    var reserveRow = document.getElementById("reserveStats")
+
+    var areaTotReal = areaTot * 10**2 //conversão da escala de cm² para a de m²
+    var areaReserveReal = areaTotReal * 0.2
+    
+    ownershipRow.children[1].innerText = `${areaTotReal} m²`
+    ownershipRow.children[2].innerText = `${generalConcersor.m2ToKM2(areaTotReal).toFixed(3)} km²`
+    ownershipRow.children[3].innerText = `${generalConcersor.m2ToHa(areaTotReal).toFixed(3)} ha`
+    
+    reserveRow.children[1].innerText = `${areaReserveReal} m²`
+    reserveRow.children[2].innerText = `${generalConcersor.m2ToKM2(areaReserveReal).toFixed(3)} km²`
+    reserveRow.children[3].innerText = `${generalConcersor.m2ToHa(areaReserveReal).toFixed(3)} ha`
+   } 
+   

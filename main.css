@@ -1,7 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Josefin+Sans&display=swap');
+
 :root{
     --ownershipHighlightColor: #02cd02;
     --legalReserveColor: #23a48f;
     --defaultSquareColor: green;
+}
+
+#map-region{
+    margin: 0.4em;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+#map{
+    padding: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color:#0000;
+    border-radius: 2px;
+   
+}
+
+#dimensions > label, input{   
+    font-size: 1.1em;
+    margin: 0.1em;
+}
+
+input#enter:hover, input#reset:hover{
+    cursor: pointer;
+}
+
+#subtitles{
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+}
+
+
+#subtitles > *{
+    margin: 0.4em;
+    border-radius: 4px;
+    font-family: "Josefin Sans", sans-serif;
+    padding: 0.6em;
+}
+
+#statistics > table{
+    font-size: 1.2em;
+}
+
+caption{
+    background-color: var(--ownershipHighlightColor);
+}
+
+caption, td, th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 7px 5px;
+}
+
+
+.line{
+    display: flex;
+    flex-direction: row;
 }
 
 .square{
@@ -10,27 +69,4 @@
     background-color: var(--defaultSquareColor);
     margin: 0.04em;
     border-radius: 2px;
-}
-
-#map{
-    width: 22cm;
-    height: 10cm;
-    padding: 1.5em;
-
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color:#0000;
-    align-content: center;
-    border-radius: 2px;
-}
-
-#dimensions{   
-     font-family: Verdana, Geneva, Tahoma, sans-serif;
-     margin: 1em;
-}
-
-.line{
-    display: flex;
-    flex-direction: row;
 }

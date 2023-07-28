@@ -3,28 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Legal Reserve Map</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div>
+    <div id="map-region">
         <div id="dimensions">
-        
             <label for="width">Largura</label>
-            <input type="number" name="width" id="width" min="1" max="20"  placeholder="0 a 20">
+            <input type="number" name="width" id="width" min="1" max="30"  placeholder="0 a 30">
 
             <label for="height">Altura</label>
-            <input type="number" name="height" id="height" min="1" max="10" placeholder="0 a 10">
+            <input type="number" name="height" id="height" min="1" max="15" placeholder="0 a 15">
 
-           <input type="button" value="Aplicar" id="enter" onclick="setOwnership();setLegalReserve()">
-           <input type="button" value="Resetar" id="reset" onclick="resetOwnership()">
+            <input type="button" value="Aplicar" id="enter" onclick="setOwnership();setLegalReserve()">
+            <input type="button" value="Resetar" id="reset" onclick="resetOwnership()">
         </div>
 
-    </div>
-    <div id="map">
-        <div class="line">
-            <div class="square" id="0" ></div>
+        <div id="map">
+            <div class="line">
+                <div class="square" id="0" ></div>
+            </div>
         </div>
+
+        <div id="subtitles">
+            <div  id="exmp-ownership-color">Propriedade</div>
+            <div class="square" style="background-color: var(--ownershipHighlightColor); width: 1em; height: 1em;"></div>
+
+            <div  id="exmp-reserve-color">Reserva Legal</div>
+            <div class="sqaure" style="background-color: var(--legalReserveColor); width: 1em; height: 1em;"></div>
+
+            <div  id="exmp-reserve-color"> Áreas vizinhas</div>
+            <div class="sqaure" style="background-color: var(--defaultSquareColor); width: 1em; height: 1em;"></div>
+        </div>
+
+        <div id="statistics">
+            <table>
+                <caption>Medidas do terreno</caption>
+                <thead>
+                    <th></th><th>m²</th><th>km²</th><th>ha</th>
+                </thead>
+                <tbody>
+                    <tr  id="ownershipStats">
+                        <td>Área da Propriedade</td>
+                        <td id="p_mt2">000</td>
+                        <td id="p_km2">000</td>
+                        <td id="p_ha">000</td>
+                    </tr>
+                    <tr id="reserveStats">
+                        <td>Área da Reserva</td>
+                        <td id="r_mt2">000</td>
+                        <td id="r_km2">000</td>
+                        <td id="r_ha">000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <th>Escala</th><td colspan="3">1cm : 100m</td>
+                </tfoot>
+            </table>
+        </div>
+        
     </div>
     <script src="map/map.js"></script>
     <script src="map/mapBehavior.js"></script>
