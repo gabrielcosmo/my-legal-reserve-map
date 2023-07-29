@@ -35,6 +35,7 @@
 
 input#enter:hover, input#reset:hover{
     cursor: pointer;
+    border-color: #02cd02;
 }
 
 #subtitles{

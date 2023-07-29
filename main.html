@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
     <title>My Legal Reserve Map</title>
 </head>
 <body>
-    <object data="./map/map.html" type="text/html" width="100%" height="100%"></object>
+    <header class="parallax">
+        <h1>
+            My green Space.
+        </h1>
+        <p>
+           Simule Mapas para Propriedades fictícias.<br>
+           Observe a conversão de escalas no Mapa.<br>
+           Veja o tamanho da Reserva Legal apropriada a ele.
+        </p>
+        <p style="margin-left: 85%;font-size: 1em;">
+            Image by <a href="https://unsplash.com/pt-br/@barnabartis" style="color: white;" target="_blank">Barna Bartis</a>
+        </p>
+    </header>
+    <main>
+        <p>
+           Configure o mapa abaixo com medidas em centímetros, e observe suas <span style="color:green">dimensões escaladas para medidas reais na tabela</span> e a área de sua 
+           <span style="color:green">Reserve Legal de vegetação nativa</span>.
+        </p>
+         <object data="./map/map.html" type="text/html" width="1300px" height="1100px"></object>
+    </main>
+    <footer class="parallax">
+        <p id="sign">
+            <a href="https://github.com/gabrielcosmo" target="_blank">by @gabrielcosmo</a>
+        </p>
+    </footer>
+   
 </body>
 </html>

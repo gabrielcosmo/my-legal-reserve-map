@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Josefin+Sans&family=Roboto+Slab:wght@400&display=swap');
+*{
+    margin-top: 0;
+    padding: 0;
+    text-align: justify;
+    font-family: 'Roboto Slab', sans-serif;
+}
+body > *{
+    margin: -0.5em;
+}
+
+p{
+    font-size: 1.1em;
+}
+
+header{
+    height: 100vh;
+}
+
+header > *{
+    margin-left: 2em;
+}
+
+header > h1{
+    font-size: 8em;
+    padding-top: 40vh;
+    padding-bottom: 0vh;
+    margin-left: 0.5em;
+    color: #0bee0b;
+}
+
+header > p{
+    color: white;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+main{
+    background-color: #c6ddc6;
+}
+
+main > *{
+    margin-left: 1.4em;
+}
+
+main > p{
+    padding-top: 6em;
+}
+
+footer {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax{
+    background-image: url('./imgs/forest.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sign > a{
+    color:#ffffff;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-decoration: none;
+    font-style: italic;
+}
+
+#sign > a:hover{
+    color: #3aff3a;
+}
