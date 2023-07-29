@@ -7,8 +7,10 @@
 }
 
 #map-region{
-    margin: 0.4em;
+    margin: auto;
     font-family: "Josefin Sans", sans-serif;
+    background-color: none;
+
 }
 
 #map{
@@ -24,6 +26,11 @@
 #dimensions > label, input{   
     font-size: 1.1em;
     margin: 0.1em;
+    font-family: 'Josefin Sans';
+    border-radius: 3px;
+    min-width: 7em;
+    background-color: #0000;
+    padding: 0.3em;
 }
 
 input#enter:hover, input#reset:hover{
