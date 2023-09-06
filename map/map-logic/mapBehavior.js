@@ -42,8 +42,6 @@ function setLegalReserve(){
     for (let index = 0; index < ownerShip.length; index++) {
         ownerShip[index].style.backgroundColor='var(--legalReserveColor)'
      }
-
-     console.log(reserveDimensions(reserveArea))
 }
 
 
