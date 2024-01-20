@@ -1,6 +1,8 @@
 
 let widthInput = document.getElementById("width")
 let heightInput = document.getElementById("height")
+let scaleInput = document.getElementById("scale")
+let percentInput = document.getElementById("percent")
 
 
 function setOwnership(){
@@ -11,7 +13,7 @@ function setOwnership(){
     for (let index = 0; index < ownerShip.length; index++) {
        ownerShip[index].style.backgroundColor='var(--ownershipHighlightColor)'
     }
-    setStats(widthNum*heightNum)
+    setStats(widthNum, heightNum)
 }
 
 
@@ -58,19 +60,29 @@ function squareStream(w, h){
     return area
 }
 
-function setStats(areaTot){
+function setStats(width, height){
     var ownershipRow = document.getElementById("ownershipStats")
     var reserveRow = document.getElementById("reserveStats")
+    
+    var scaleDefault = 100 //valor arbitrário
+    var scaleInputNum = Number(scaleInput.value)
+    var scale = scaleInputNum > 0? scaleInputNum: scaleDefault
 
-    var areaTotReal = areaTot * 10**2 //conversão da escala de cm² para a de m²
-    var areaReserveReal = areaTotReal * 0.2
+    var percentDefault = 20 //valor arbitrário
+    var percentInputNum = Number(percentInput.value)
+    var percent = percentInputNum > 0? percentInputNum: percentDefault
+
+    var areaTotReal = width * height * scale ** 2 //conversão 1cm2 : Xm2
+    var areaReserveReal = areaTotReal * percent/100   // 0.2 -> percentual da reserva
     
     ownershipRow.children[1].innerText = `${areaTotReal} m²`
-    ownershipRow.children[2].innerText = `${generalConcersor.m2ToKM2(areaTotReal).toFixed(3)} km²`
-    ownershipRow.children[3].innerText = `${generalConcersor.m2ToHa(areaTotReal).toFixed(3)} ha`
+    ownershipRow.children[2].innerText = `${generalConversor.m2ToKM2(areaTotReal).toFixed(3)} km²`
+    ownershipRow.children[3].innerText = `${generalConversor.m2ToHa(areaTotReal).toFixed(3)} ha`
     
     reserveRow.children[1].innerText = `${areaReserveReal} m²`
-    reserveRow.children[2].innerText = `${generalConcersor.m2ToKM2(areaReserveReal).toFixed(3)} km²`
-    reserveRow.children[3].innerText = `${generalConcersor.m2ToHa(areaReserveReal).toFixed(3)} ha`
+    reserveRow.children[2].innerText = `${generalConversor.m2ToKM2(areaReserveReal).toFixed(3)} km²`
+    reserveRow.children[3].innerText = `${generalConversor.m2ToHa(areaReserveReal).toFixed(3)} ha`
+
+    document.getElementById("scale-display").innerText = `1cm : ${scale}m` //atualizando informação de escala na tabela
    } 
    

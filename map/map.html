@@ -15,7 +15,15 @@
             <label for="height">Altura</label>
             <input type="number" name="height" id="height" min="1" max="15" placeholder="1 a 15 (cm)">
 
+            <label for="scale">Escala</label>
+            <input type="number" name="scale" id="scale" min="1" max="15" placeholder="1 : x">
+
+            <label for="percent">Percentual de Reserva</label>
+            <input type="number" name="percent" id="percent" min="1"  placeholder="ex.: Para 25% digite apenas 25">
+
+            <br><br>
             <input type="button" value="Aplicar" id="enter" onclick="setOwnership();setLegalReserve()">
+            <br>
             <input type="button" value="Resetar" id="reset" onclick="resetOwnership()">
         </div>
 
@@ -57,7 +65,7 @@
                     </tr>
                 </tbody>
                 <tfoot>
-                    <th>Escala</th><td colspan="3">1cm : 100m</td>
+                    <th>Escala</th><td colspan="3" id="scale-display">1cm : ...m</td>
                 </tfoot>
             </table>
         </div>
